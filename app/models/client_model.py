@@ -13,6 +13,6 @@ class Client(db.Model):
     id = db.Column(db.Integer, primary_key=True, auto_increment=True)
     name = db.Column(db.String(50))
     email = db.Column(db.String(200), unique=True)
-    data_nascimento = db.Column(db.Datetime)
+    date_of_birth = db.Column(db.DateTime)
     profession = db.Column(db.String(30))
-    sex = db.Column(ChoiceType=SEX_CHOICES)
+    sex = db.Column(ChoiceType(SEX_CHOICES))
