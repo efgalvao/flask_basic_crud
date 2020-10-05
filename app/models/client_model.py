@@ -4,7 +4,7 @@ from sqlalchemy_utils import ChoiceType
 class Client(db.Model):
     __tablename__ = "clients"
 
-    SEX_CHOICES = [
+    GENDER_CHOICES = [
         (u'M', u'Masculino'),
         (u'F', u'Feminino'),
         (u'N', u'Nenhuma das opções')
@@ -15,4 +15,4 @@ class Client(db.Model):
     email = db.Column(db.String(200), unique=True)
     date_of_birth = db.Column(db.DateTime)
     profession = db.Column(db.String(30))
-    sex = db.Column(ChoiceType(SEX_CHOICES))
+    gender = db.Column(ChoiceType(GENDER_CHOICES))
